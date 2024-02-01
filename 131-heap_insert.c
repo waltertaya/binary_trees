@@ -1,6 +1,4 @@
 #include "binary_trees.h"
-#include<stdlib.h>
-#include<string.h>
 #define INIT_NODE {0, NULL, NULL, NULL}
 
 /**
@@ -9,6 +7,8 @@
  * @b: second node
  * Return: pointer to root
  */
+ 
+ 
 bst_t *swap(bst_t *a, bst_t *b)
 {
 	bst_t a_copy = INIT_NODE;
@@ -52,6 +52,7 @@ bst_t *swap(bst_t *a, bst_t *b)
 	return (b);
 }
 
+
 /**
  * convert - converts number and base into string
  * @num: input number
@@ -59,6 +60,7 @@ bst_t *swap(bst_t *a, bst_t *b)
  * @lowercase: flag if hexa values need to be lowercase
  * Return: result string
  */
+ 
 char *convert(unsigned long int num, int base, int lowercase)
 {
 	static char *rep;
@@ -78,11 +80,14 @@ char *convert(unsigned long int num, int base, int lowercase)
 	return (ptr);
 }
 
+
 /**
  * binary_tree_size - measures the size of a binary tree
  * @tree: input binary tree
  * Return: number of descendant child nodes
  */
+ 
+ 
 size_t binary_tree_size(const binary_tree_t *tree)
 {
 	if (!tree)
@@ -91,11 +96,14 @@ size_t binary_tree_size(const binary_tree_t *tree)
 	return (1 + binary_tree_size(tree->left) + binary_tree_size(tree->right));
 }
 
+
 /**
  * insert - helper func to insert node to correct location
  * @root: double pointer to root of max heap
  * @node: node to insert
  */
+ 
+ 
 void insert(heap_t **root, heap_t *node)
 {
 	heap_t *tmp;
@@ -139,6 +147,8 @@ void insert(heap_t **root, heap_t *node)
  * @value: input value
  * Return: pointer to the created node, or NULL on failure
  */
+ 
+ 
 heap_t *heap_insert(heap_t **root, int value)
 {
 	heap_t *ht = NULL, *ret;
