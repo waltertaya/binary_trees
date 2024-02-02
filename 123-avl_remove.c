@@ -21,8 +21,6 @@ void bal(avl_t **tree)
 	else if (bval < -1)
 		*tree = binary_tree_rotate_left((binary_tree_t *)*tree);
 }
-
-
 /**
  * successor - get the next successor i mean the min node in the right subtree
  * @node: tree to check
@@ -47,8 +45,6 @@ int successor(bst_t *node)
 	}
 
 }
-
-
 /**
  *remove_type - function that removes a node depending of its children
  *@root: node to remove
@@ -95,8 +91,6 @@ int remove_type(bst_t *root)
 		return (new_value);
 	}
 }
-
-
 /**
  * bst_remove - remove a node from a BST tree
  * @root: root of the tree
@@ -123,7 +117,6 @@ bst_t *bst_remove(bst_t *root, int value)
 		return (NULL);
 	return (root);
 }
-
 
 /**
  * avl_remove - remove a node from a AVL tree
